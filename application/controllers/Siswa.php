@@ -78,6 +78,12 @@ class Siswa extends CI_Controller
         }
     }
 
+    public function print()
+    {
+        $data['siswa'] = $this->siswa_model->get_data('tbl_siswa')->result();
+        $this->load->view('print_siswa', $data);
+    }
+
     public function _rules()
     {
         $this->form_validation->set_rules('nama_siswa', 'Nama Siswa', 'required', array('required' => '%s Harus diisi !!'));
