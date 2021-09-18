@@ -4,10 +4,10 @@
 <div class="card">
     <div class="card-header">
         <a href="<?= base_url('siswa/tambah'); ?>" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah Data Siswa</a>
-        <a href="<?= base_url('siswa/print'); ?>" class="btn btn-info btn-sm"><i class="fas fa-print"></i> Print</a>
+        <a href="<?= base_url('siswa/print'); ?>" class="btn btn-info btn-sm float-right" target="_blank"><i class="fas fa-print"></i> Print</a>
     </div>
     <!-- /.card-header -->
-    <div class="card-body">
+    <div class="card-body table-responsive-sm">
         <table id="example2" class="table table-bordered table-hover">
             <thead>
                 <tr class="text-center">
@@ -20,10 +20,10 @@
                 </tr>
             </thead>
 
-            <!-- Foreach -->
-            <?php $no = 1;
-            foreach ($siswa as $ssw) : ?>
-                <tbody>
+            <tbody>
+                <!-- Foreach -->
+                <?php $no = 1;
+                foreach ($siswa as $ssw) : ?>
                     <tr class="text-center">
                         <td><?= $no++ ?></td>
                         <td><?= $ssw->nama_siswa ?></td>
@@ -38,8 +38,8 @@
                             <a href="<?= base_url('siswa/delete/' . $ssw->id_siswa); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakan anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></a>
                         </td>
                     </tr>
-                </tbody>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </tbody>
         </table>
     </div>
 </div>

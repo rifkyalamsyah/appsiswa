@@ -10,13 +10,13 @@
 
 <body>
     <!-- Table -->
-    <table>
+    <table class="table table-bordered" border="1 solid-black">
         <tr>
             <th>No.</th>
             <th>Nama Siswa</th>
             <th>Kelas Siswa</th>
             <th>Alamat</th>
-            <th>No Telepon</th>
+            <th>No. Telepon</th>
         </tr>
 
         <?php $no = 1;
@@ -29,6 +29,7 @@
                 <td><?= $ssw->no_telepon ?></td>
             </tr>
         <?php endforeach; ?>
+
     </table>
 
     <!-- Js -->
