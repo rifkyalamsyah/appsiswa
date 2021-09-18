@@ -55,19 +55,22 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-item">
-                            <a href="<?= base_url('dashboard'); ?>" class="nav-link">
+                            <a href="<?= base_url('dashboard'); ?>" class="nav-link
+                            <?php if ($this->uri->segment(1) == 'dashboard') echo 'active'; ?>">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>Dashboard</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('siswa'); ?>" class="nav-link">
+                            <a href="<?= base_url('siswa'); ?>" class="nav-link 
+                            <?php if ($this->uri->segment(1) == 'siswa') echo 'active'; ?>">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>Siswa</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link
+                            <?php if ($this->uri->segment(1) == 'guru') echo 'active'; ?>">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>Guru</p>
                             </a>
